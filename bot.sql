@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 08:52 AM
+-- Host: 127.0.0.1:3307
+-- Generation Time: Dec 14, 2021 at 09:34 AM
 -- Server version: 10.4.17-MariaDB
--- PHP Version: 7.3.27
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,13 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `appointment` (
-  `Id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone` int(10) NOT NULL,
-  `date` date NOT NULL,
-  `department` varchar(50) NOT NULL,
-  `comment` varchar(500) NOT NULL
+  `contact` bigint(50) NOT NULL,
+  `appointment_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -54,12 +52,14 @@ CREATE TABLE `chatbot` (
 --
 
 INSERT INTO `chatbot` (`Id`, `query`, `reply`) VALUES
-(1, 'hi|hello|hey|hy|Hello!|Namaste!|namaste|namaste!', 'Hello there !'),
+(1, 'hi|hello|hey|hy|Hello!|Namaste!|namaste|namaste!', 'Hello there ! would you like to make an appointment?'),
 (2, 'what is your name| what is your name?', 'My name is chatbotBahadur.'),
 (3, 'Where are you from| where are you from?', 'I\'m from Nepal.'),
 (4, 'bye|by|good bye|goodbye', 'Ok bye.  See you soon!'),
 (5, 'can i make an appointment? |can i make an appointment| appointment | Appointment', 'Sure.'),
-(6, 'is Doctor available?| is doctor available| is doctor available?', 'Yes. Please contact +977-987654321');
+(6, 'is Doctor available?| is doctor available| is doctor available?', 'Yes. Please contact +977-987654321'),
+(7, 'yes| yes please| sure|okay|ok', 'Please visit following link to book your appointment.\r\n\r\n\r\n\r\nhttp://localhost:88/chat-bot/appointment.php'),
+(8, 'yes| yes please| sure|okay|ok', 'When do you want to book your appointment? (dd-mm-yyyy)');
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE `patient` (
 -- Indexes for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `chatbot`
@@ -116,13 +116,13 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `chatbot`
 --
 ALTER TABLE `chatbot`
-  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `department`
