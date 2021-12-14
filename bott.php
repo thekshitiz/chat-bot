@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Chatbot in PHP | CodingNepal</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="../IsmtChatBot\style.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
@@ -16,7 +16,7 @@
   <a href="#">Home</a>
   <a href="#">Servies</a>
   <a href="#">Contact</a>
-  <a href="#" style="float:right">BotBahadur</a>
+  <a href="#" style="float:right; font-weight: 600;">XYZ Clinic</a>
 </div>
 
 
@@ -25,11 +25,9 @@
   <div class="row">
   <div class="leftcolumn">
         <div class="card">
-        <h2>XYZ Clinic</h2>
+        <h1>XYZ Clinic</h1>
         <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg" ><img src="http://thewellmedical.com/2020/wp-content/uploads/2020/05/Untitled-1-01-scaled.jpg" alt="clinic img"></div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium reiciendis recusandae ipsam vitae, ratione reprehenderit accusamus quod ducimus sapiente distinctio placeat maiores adipisci doloribus possimus corporis dolores esse quaerat quia!</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <div class="fakeimg" ><img src="doctor.png" alt="clinic img"></div>
         </div>
     </div>
 </div>
@@ -49,7 +47,11 @@
 
   </div>
   <div class="column"> <div class="wrapper ">
-        <div class="title">Bot Bahadur</div>
+        <div class="title">
+        <div class="is-active"></div>
+            Bot Bahadur
+           
+        </div>
         <div class="form" id="myForm">
             <div class="bot-inbox inbox">
                 <div class="icon">
@@ -70,10 +72,17 @@
 
 </div>
     </div>
-
-    <div class="bot-icon">
-        <i class="fas fa-robot"></i>
+    <div class="row">
+  <div class="column">
+  <p>A world-class quaternary care facility with multiple Centers of Excellence. Nepal Mediciti combines the finest medical minds and advanced technology to provide holistic treatment within a Multi-Disciplinary Framework. Nepal Mediciti aspires to evolve as the health-care destination of choice in South Asia. We will provide a platform for practicing safe and evidence based medicine driven by international guidelines and protocols. We will foster research, education and a distinctive work culture that will set high ethical and social standards. Nepal Mediciti is a Private institution with a Public purpose which will lay emphasis on:</p>
     </div>
+</div>
+
+    
+
+    <!-- <div class="bot-icon">
+        <i class="fas fa-robot"></i>
+    </div> -->
     <!-- <div class="wrapper-2">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ratione error asperiores molestias? Qui exercitationem cupiditate pariatur rem, similique dignissimos facere harum debitis voluptatum ipsum laudantium doloribus quod voluptas numquam.
